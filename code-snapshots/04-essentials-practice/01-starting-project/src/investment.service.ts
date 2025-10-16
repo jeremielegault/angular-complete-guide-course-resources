@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import type { InvestmentInput } from './investment-input.model';
+import type { InvestmentInput } from './app/investment-input.model';
 
 @Injectable({ providedIn: 'root' })
 export class InvestmentService {
