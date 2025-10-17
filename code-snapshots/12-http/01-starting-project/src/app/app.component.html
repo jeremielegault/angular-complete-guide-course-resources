@@ -1,3 +1,7 @@
+@if (error()) {
+<app-error-modal title="An Error Occured" [message]="error()" />
+} @else {
+
 <header>
   <img src="logo.png" alt="Stylized globe" />
   <h1>PlacePicker</h1>
@@ -12,3 +16,4 @@
 
   <app-user-places />
 </main>
+}
