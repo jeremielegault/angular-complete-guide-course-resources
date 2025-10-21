@@ -14,4 +14,11 @@
 
     <button class="button" (click)="onSubmit()">Login</button>
   </div>
+  @if (emailIsInvalid) {
+  <p class="control-error">Please enter a valid email address.</p>
+  } @if (passwordIsInvalid) {
+  <p class="control-error">
+    Please enter a valid email password (at least 6 characters long).
+  </p>
+  }
 </form>
