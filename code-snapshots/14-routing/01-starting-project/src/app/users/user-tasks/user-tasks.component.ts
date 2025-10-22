@@ -11,12 +11,14 @@ import { ActivatedRoute, RouterOutlet, RouterLink } from '@angular/router';
 })
 export class UserTasksComponent {
   userId = input.required<string>()
+  message = input.required<string>()
   private usersService = inject(UsersService)
   private activatedRoute = inject(ActivatedRoute)
   private destroyRef = inject(DestroyRef)
   // userName = computed(() => this.usersService.users.find(u => u.id === this.userId())?.name)
   userName = ''
   ngOnInit(): void {
+    console.log('input data: ', this.message())
     console.log(this.activatedRoute)
     console.log(this.activatedRoute.snapshot.paramMap.get('userId'))
     const subscription = this.activatedRoute.paramMap.subscribe({
