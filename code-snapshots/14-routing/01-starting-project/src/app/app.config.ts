@@ -4,8 +4,11 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes, withComponentInputBinding(), withRouterConfig({
-      paramsInheritanceStrategy: 'always',
-    }))
+    provideRouter(routes,
+      // with component input binding allows grabbing of query params
+      withComponentInputBinding(),
+      withRouterConfig({
+        paramsInheritanceStrategy: 'always',
+      }))
   ]
 }
