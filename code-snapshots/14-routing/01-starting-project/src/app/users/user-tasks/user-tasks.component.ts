@@ -10,9 +10,18 @@ import { RouterOutlet, RouterLink, ResolveFn, ActivatedRouteSnapshot, RouterStat
   imports: [RouterOutlet, RouterLink],
 })
 export class UserTasksComponent {
-  userId = input.required<string>()
   message = input.required<string>()
   userName = input.required<string>()
+  // different way to get a hold of the dynamic data from the route
+  // private activatedRoute = inject(ActivatedRoute)
+
+  // ngOnInit(): void {
+  //   this.activatedRoute.data.subscribe({
+  //     next: data => {
+  //       console.log(data)
+  //     }
+  //   })
+  // }
 }
 export const resolveUserName: ResolveFn<string> = (
   activatedRoute: ActivatedRouteSnapshot,
