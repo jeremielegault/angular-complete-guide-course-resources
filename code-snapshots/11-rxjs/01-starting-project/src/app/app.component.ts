@@ -1,4 +1,4 @@
-import { Component, DestroyRef, OnInit, OnDestroy, inject } from '@angular/core';
+import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { interval } from 'rxjs';
 @Component({
   selector: 'app-root',
